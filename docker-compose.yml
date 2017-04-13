@@ -1,0 +1,18 @@
+version: "2"
+services:
+  core0:
+    image:  amacneil/bitcoin:0.13.2
+    volumes: 
+      - "./config/core0.conf:/home/bitcoin/.bitcoin/bitcoin.conf"
+  core1:
+    image: amacneil/bitcoin:0.13.2
+    volumes: 
+      - "./config/core1.conf:/home/bitcoin/.bitcoin/bitcoin.conf"
+  bu0:
+    image: amacneil/bitcoinunlimited:1.0.1.1
+    volumes:
+      - "./config/bu0.conf:/home/bitcoin/.bitcoin/bitcoin.conf"
+  bu1:
+    image: amacneil/bitcoinunlimited:1.0.1.1
+    volumes:
+      - "./config/bu1.conf:/home/bitcoin/.bitcoin/bitcoin.conf"
