@@ -16,3 +16,11 @@ services:
     image: amacneil/bitcoinunlimited:1.0.1.1
     volumes:
       - "./config/bu1.conf:/home/bitcoin/.bitcoin/bitcoin.conf"
+  bitcore:
+    image: sena/bitcore
+    volumes:
+      - "./config/bitcore.conf:/root/.bitcore/data/bitcoin.conf"
+      - "./config/bitcore-node.json:/root/.bitcore/bitcore-node.json"
+    ports:
+      - "3001:3001" 
+      - "18333:18333"
